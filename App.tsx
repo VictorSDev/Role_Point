@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Routes from "./src/routes";
+// import {
+//   useFonts,
+//   Outfit_400Regular,
+//   Outfit_500Medium,
+//   Outfit_600SemiBold,
+//   Outfit_700Bold,
+//   Outfit_900Black,
+// } from "@expo-google-fonts/outfit";
+// import Loading from "./src/components/Loading";
+import { SafeAreaView } from "react-native";
 
 export default function App() {
+
+  // const [fontsLoaded] = useFonts({
+  //   Outfit_400Regular,
+  //   Outfit_500Medium,
+  //   Outfit_600SemiBold,
+  //   Outfit_700Bold,
+  //   Outfit_900Black,
+  // });
+
+  // if (!fontsLoaded) return <Loading />;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView className="flex-1">
+        <Routes />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
